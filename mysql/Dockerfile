@@ -1,4 +1,6 @@
-FROM ubuntu:latest
-LABEL authors="nikita"
+FROM mysql:8.0
 
-ENTRYPOINT ["top", "-b"]
+ENV MYSQL_ROOT_PASSWORD=mira
+ENV MYSQL_DATABASE=mira
+ENV MYSQL_USER=mira
+ENV MYSQL_PASSWORD=mira
