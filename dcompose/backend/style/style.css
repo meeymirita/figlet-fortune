@@ -1,0 +1,120 @@
+body {
+    background: #0b0f14;
+    color: #e6edf3;
+    font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+
+
+/* HEADER UPGRADE */
+.profile-card {
+    height: 260px;
+    border-radius: 20px;
+    background: url('img/friren_2.jpg') center/cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* затемнение + глубина */
+.profile-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.3)),
+            linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* контент поверх */
+.profile-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+/* аватар апгрейд */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* технологии */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* бейджи красивее */
+.badge-ui {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.badge-ui:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+
+/* заголовок сильнее */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* текст */
+.small-text {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+/* CARD */
+.ui-card {
+    background: #11161c;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.ui-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.15);
+}
+
+/* AVATAR */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* BADGES */
+.badge-ui {
+    background: rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+/* TEXT */
+.small-text {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+.muted {
+    opacity: 0.6;
+    font-size: 14px;
+}

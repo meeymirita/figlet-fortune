@@ -1,0 +1,27 @@
+services:
+  nginx:
+    container_name: mira-nginx
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      php:
+        condition: service_healthy
+    volumes:
+      - ./backend:/var/www/backend
+
+  php:
+    container_name: mira-php-fpm
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    volumes:
+      - ./backend:/var/www/backend
+    healthcheck:
+      test: ["CMD", "php-fpm", "-t"]
+      interval: 3s
+      timeout: 5s
+      retries: 5
+      start_period: 1s
