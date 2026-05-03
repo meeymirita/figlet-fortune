@@ -5,4 +5,4 @@ RUN apt update -y && \
     apt install -y fortune figlet && \
     ln -s /usr/games/fortune /usr/bin/fortune
 
-CMD figlet MIRITA && fortune && bash
+CMD figlet YURIY && fortune && bash
